@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingTop="10dp">
+
+    <ImageView
+        android:id="@+id/dialogPay_close_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/close"
+        android:src="@mipmap/close"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/please_input_pay_password"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.jiangfeng.dialogpay.PasswordEditText
+        android:id="@+id/dialogPay_password_et"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@null"
+        android:focusable="false"
+        app:bgCorner="5dp"
+        app:layout_constraintTop_toBottomOf="@id/dialogPay_close_iv"
+        app:passwordColor="@color/black" />
+
+    <TextView
+        android:id="@+id/dialogPay_forgetPassword_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/forget_password"
+        android:textSize="14sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialogPay_password_et" />
+
+    <com.jiangfeng.dialogpay.NumberKeyboardView
+        android:id="@+id/dialogPay_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#b0b0b0"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:keyBackground="@drawable/btn_white"
+        android:keyTextColor="#000000"
+        android:shadowColor="@android:color/transparent"
+        android:shadowRadius="5"
+        app:deleteBackgroundColor="#d2d2d2"
+        app:deleteDrawable="@mipmap/close"
+        app:deleteWidth="22dp"
+        app:layout_constraintTop_toBottomOf="@id/dialogPay_forgetPassword_tv" />
+
+</android.support.constraint.ConstraintLayout>

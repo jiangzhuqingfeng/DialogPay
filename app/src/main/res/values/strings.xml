@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">DialogPay</string>
+    <string name="close">关闭</string>
+    <string name="please_input_pay_password">请输入支付密码</string>
+    <string name="forget_password">忘记密码？</string>
+</resources>
